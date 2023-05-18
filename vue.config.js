@@ -15,7 +15,7 @@ function isProd() {
 
 const name = defaultSettings.title || 'Vue2.x Template' // page title
 
-const port = process.env.port || process.env.npm_config_port || 8095 // dev port
+const port = process.env.port || process.env.npm_config_port || 8070 // dev port
 
 module.exports = {
   publicPath: '/',

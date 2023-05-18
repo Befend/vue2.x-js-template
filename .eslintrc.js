@@ -9,7 +9,12 @@ module.exports = {
     node: true,
     es6: true
   },
-  extends: ['plugin:vue/recommended', 'eslint:recommended'],
+  extends: [
+    'plugin:vue/vue3-strongly-recommended',
+    'plugin:vue/strongly-recommended',
+    'plugin:vue/vue3-recommended',
+    'plugin:vue/recommended'
+  ],
 
   // add your custom rules here
   // it is base on https://github.com/vuejs/eslint-config-vue
@@ -17,13 +22,24 @@ module.exports = {
     'vue/max-attributes-per-line': [
       'error',
       {
-        singleline: 10,
-        multiline: 1
+        singleline: {
+          max: 5
+        },
+        multiline: {
+          max: 1
+        }
       }
     ],
     'vue/singleline-html-element-content-newline': 'off',
     'vue/multiline-html-element-content-newline': 'off',
     'vue/name-property-casing': ['error', 'PascalCase'],
+    'vue/html-closing-bracket-newline': [
+      'error',
+      {
+        singleline: 'never',
+        multiline: 'always'
+      }
+    ],
     'vue/html-self-closing': [
       'error',
       {
@@ -44,7 +60,7 @@ module.exports = {
         attribute: 1,
         baseIndent: 1,
         closeBracket: 0,
-        alignAttributesVertically: true,
+        alignAttributesVertically: false,
         ignores: []
       }
     ],
